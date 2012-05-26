@@ -20,6 +20,7 @@ throws_ok(
     'instantiation with only auth_url, user arguments throws an exception'
 );
 
-
+my $noc =    Net::OpenStack::Compute->new( auth_url => 'foo', user => 'bar', password => '123' );
+isa_ok($noc, 'Net::OpenStack::Compute');
 
 done_testing;
